@@ -1,0 +1,123 @@
+/* AIS.chat in der Praxis — minimalistisches Layout */
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --pico-primary: #0d6b63;
+    --pico-primary-background: #0d6b63;
+    --pico-primary-border: var(--pico-primary-background);
+    --pico-primary-underline: rgba(13, 107, 99, 0.4);
+    --pico-primary-hover: #084a44;
+    --pico-primary-hover-background: #0b5b55;
+    --pico-primary-hover-border: var(--pico-primary-hover-background);
+    --pico-primary-hover-underline: var(--pico-primary-hover);
+    --pico-primary-focus: rgba(13, 107, 99, 0.3);
+    --pico-primary-inverse: #fff;
+
+    --pico-background-color: #fbfaf8;
+    --pico-color: #23211e;
+    --pico-h1-color: #23211e;
+    --pico-h2-color: #23211e;
+    --pico-muted-color: #6d6761;
+    --pico-blockquote-border-color: #ddd8d0;
+    --pico-code-background-color: #f2efe9;
+    --pico-code-color: #3a3631;
+    --pico-font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+    --pico-font-size: 100%;
+    --pico-line-height: 1.65;
+    --pico-spacing: 1.2rem;
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+}
+
+body { -webkit-font-smoothing: antialiased; }
+
+h1, h2, .untertitel { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.7rem, 1.2rem + 2vw, 2.4rem); line-height: 1.2; }
+h2 { font-size: 1.3rem; margin-top: 2.6rem; }
+
+.container { max-width: 62rem; }
+
+/* ---------- Startseite ---------- */
+
+.start { padding-block: clamp(2.5rem, 6vw, 5rem) 3rem; }
+.start > header { max-width: 42rem; margin-bottom: 3rem; }
+.hinweis {
+    display: inline-block;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8a5a1e;
+    background: #f7efe1;
+    border-radius: 2px;
+    padding: 0.25rem 0.6rem;
+    margin-bottom: 1.2rem;
+}
+.start h1 { margin-bottom: 0.4rem; }
+.untertitel { font-size: 1.15rem; color: var(--pico-muted-color); margin-bottom: 1.8rem; }
+.start header p { margin-bottom: 1rem; }
+
+/* ---------- Kacheln ---------- */
+
+.kacheln {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1.6rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.kacheln li { margin: 0; }
+.kacheln a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e7e2da;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.kacheln a:hover, .kacheln a:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(35, 33, 30, 0.09);
+    border-color: #cfc8bd;
+}
+.kacheln img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.kacheln .text { padding: 0.9rem 1rem 1.1rem; }
+.kacheln .name { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; display: block; }
+.kacheln .fach { font-size: 0.85rem; color: var(--pico-muted-color); display: block; margin-top: 0.15rem; }
+
+/* ---------- Porträtseite ---------- */
+
+.portraet { max-width: 44rem; padding-block: 2rem 3rem; }
+.kopfbild { margin: 0 0 2rem; }
+.kopfbild img { width: 100%; height: auto; border-radius: 4px; }
+.portraet h1 { margin-bottom: 1rem; }
+.zitat {
+    font-family: var(--serif);
+    font-size: 1.12rem;
+    line-height: 1.5;
+    border-left: 3px solid var(--pico-primary);
+    padding-left: 1rem;
+    margin-bottom: 1.2rem;
+}
+.meta { font-size: 0.9rem; color: var(--pico-muted-color); margin-bottom: 2.5rem; }
+.portraet blockquote { font-size: 0.97rem; background: #f6f4f0; padding: 0.9rem 1.2rem; }
+.portraet blockquote p { margin: 0; }
+.portraet pre { font-size: 0.82rem; line-height: 1.5; border-radius: 4px; }
+.portraet li { margin-bottom: 0.5rem; }
+
+.zurueck { font-size: 0.9rem; margin-bottom: 1.5rem; }
+.zurueck.unten { margin-top: 3rem; border-top: 1px solid #e7e2da; padding-top: 1.5rem; }
+
+/* ---------- Fußzeile ---------- */
+
+body > footer {
+    border-top: 1px solid #e7e2da;
+    padding-block: 1.5rem 3rem;
+    font-size: 0.85rem;
+    color: var(--pico-muted-color);
+}
+body > footer p { margin: 0; }
