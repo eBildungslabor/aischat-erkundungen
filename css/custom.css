@@ -72,7 +72,7 @@ h2 { font-size: 1.3rem; margin-top: 2.6rem; }
 @media (max-width: 40rem) {
     .kacheln { grid-template-columns: 1fr; gap: 1.4rem; }
 }
-.kacheln li { margin: 0; }
+.kacheln li { margin: 0; list-style: none; }
 .kacheln a {
     display: block;
     text-decoration: none;
