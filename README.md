@@ -50,4 +50,10 @@ Danke an alle, deren offene Arbeit hier weitergenutzt wird:
 
 ## Auftrag und Lizenz
 
-Die Inhalte entstehen im Auftrag des [NLQ](https://www.nlq.niedersachsen.de) und werden vom [eBildungslabor](https://ebildungslabor.de) erarbeitet. Die Lizenz für die Nachnutzung wird mit Fertigstellung des Selbstlernangebots festgelegt.
+Die Inhalte entstehen im Auftrag des [NLQ](https://www.nlq.niedersachsen.de) und werden vom [eBildungslabor](https://ebildungslabor.de) erarbeitet.
+
+Sie stehen unter der Lizenz [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). Nachnutzung ist also ausdrücklich erwünscht, auch verändert und auch kommerziell, solange die Herkunft angegeben wird. Empfohlene Namensnennung:
+
+> "AIS.chat in der Praxis — Über die Schulter geschaut" von NLQ, Lizenz: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de)
+
+Ausgenommen ist das enthaltene CSS-Framework Pico CSS, das unter der MIT-Lizenz steht.
